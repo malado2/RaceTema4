@@ -160,7 +160,7 @@ subset(cran, package == "plotly" & r_version == "3.5.1")
 ```
 6. Elige aquellas descargas realizadas desde España (ES), con versiones de R superiores a la 3.4.0
 ```{r}
-subset(cran, country == "ES" & r_version == "3.4.0")
+subset(cran, country == "ES" & r_version > "3.4.0")
 ```
 
 7. Elige aquellas descargas realizadas desde España (ES), o Portugal (PT).
@@ -172,7 +172,7 @@ subset(cran, country == "ES" | country == "PT")
 
 8. Elige aquellas descargas cuyo tamaño supera los 100500 bytes desde un sistema operativo  `linux-gnu`.
 ```{r}
-
+subset(cran, r_os == "linux-gnu", size > '100500')
 ```
 9. Elige aquellas descargas en las que la versión del sistema operativo no está vacía.
 ```{r}
