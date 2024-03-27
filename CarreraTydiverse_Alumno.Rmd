@@ -138,7 +138,8 @@ glimpse(cran) #Esta funcion nos muestra las columnas de nuestro data frame.
 
 4. Elige únicamente las variables `ip_id, package, country`
 ```{r}
-
+cran[, c("ip_id", "package", "country")] #Seleccionamos unicamente
+#esas tres columnas
 ```
 5. Elige todas las variables entre `r_arch y country` 
 ```{r}
