@@ -59,7 +59,7 @@ opts_chunk$set(echo=T,message = F, error = F, warning = F, comment = NA, fig.ali
 ```{r,echo=FALSE}
 
 library(pacman)
-p_load(dplyr,lubridate)
+p_load(dplyr,lubridate,tidyr, plotly, ggplot2)
 
 ```
 
@@ -228,7 +228,8 @@ cran3
 ```
 18. Usa `summarise` para determinar el valor medio del tamaño de las descargas realizadas en `cran` y almacenálo en la variable `avg_bytes`
 ```{r}
-
+avg_bytes <- summarise(cran3, avg_bytes = mean(correct_size))
+avg_bytes
 ```
 # Agrupamientos
 
