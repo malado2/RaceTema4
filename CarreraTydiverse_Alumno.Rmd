@@ -148,7 +148,8 @@ cran%>%select(r_arch:country) #De esta manera estamos seleccionando las columnas
 ```
 5. Puedes usar el signo (-) para no coger una columna determinada. Selecciona todas las columnas menos las que están entre `date y size` 
 ```{r}
-
+cran%>%select(-time) #Asi seleccionamos todas las columnas menos 'time' que es 
+#la que esta entre data y size.
 
 
 
